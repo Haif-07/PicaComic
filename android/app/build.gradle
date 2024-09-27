@@ -56,7 +56,14 @@ android {
         versionName flutterVersionName
         multiDexEnabled true
     }
-
+    buildTypes {
+    release {
+        // 暂时注释掉签名配置
+        // signingConfig signingConfigs.release
+        minifyEnabled false
+        shrinkResources false
+    }
+}
     namespace 'com.kokoiro.xyz.pica_comic'
 }
 
